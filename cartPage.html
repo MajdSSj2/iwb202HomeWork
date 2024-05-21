@@ -1,0 +1,35 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>سلة المشتريات</title>
+</head>
+<body>
+    <h1>سلة المشتريات </h1>
+    <div id="cartItemsContainer"></div>
+       <p > الاجمالي:  <span id="total">0</span> ل.س</p>
+
+    <script>
+        // Retrieve cart data from local storage
+        const cartItems = JSON.parse(localStorage.getItem('CartItems')) || [];
+       let Total = 0;
+        // Display cart items
+        const cartContainer = document.getElementById('cartItemsContainer');
+        
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.textContent = ` العقار: ${item.name} - السعر: .${item.price} ل.س`;
+            Total += item.price;
+            cartContainer.appendChild(itemDiv);
+              const p = document.getElementById('total')
+              p.textContent = Total;
+        });
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+    "https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity=
+    "sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous">
+    <title>العقارات</title>
+</head>
+<body onload="generate()">
+    <div class="navbar">
+        
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="about_us.html">من نحن</a>
+    </div>
+
+
+    <table >
+        <tr>
+            <th>المدينة</th>
+            <th>تفاصيل</th>
+            <th>الإيجار الشهري</th>
+            <th>إظهار التفاصيل</th>
+            <th >اختيار</th>
+        </tr>
+        <tr>
+            <td>دمشق</td>
+            <td > شقة غرفة وصالة مساحة 70 م</td>
+            <td>500000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail1' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'شقة غرفة وصالة مساحة 70 م',500000)"  ></td>
+        </tr>
+        <tr id="detail1" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: ركن الدين                    متوفر كراج                الطابق الثالث  </pre> 
+                <pre>    الملكية: طابو                بلكون مساحة 12 متر             مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>حمص</td>
+            <td > شقة غرفة  مساحة 100 م</td>
+            <td>600000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail2' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'شقة  غرفة  مساحة 100 م',600000)"  ></td>
+        </tr>
+        <tr id="detail2" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: وادي الذهب         الطابق الاول  </pre> 
+                <pre>    الملكية: طابو                بلكون مساحة 12 متر          غير  مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>حلب</td>
+            <td >  دكان مساحة 50م</td>
+            <td>200000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail3' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, ' دكان مساحة 50م',200000)"  ></td>
+        </tr>
+        <tr id="detail3" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة:الجميلية                   متوفر سطح للمحل                   </pre> 
+                <pre>    الملكية: طابو                            مع مستودع خارجي       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>دمشق </td>
+            <td > فيلا </td>
+            <td>1000000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail4' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, '     فيلا',1000000)"  ></td>
+        </tr>
+        <tr id="detail4" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: ميزة فيلات                    متوفر كراج و مسبح             </pre> 
+                <pre>    الملكية: طابو                         غير  مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>حماة </td>
+            <td > شقة غرفتين وصالة مساحة 170 م</td>
+            <td>700000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail5' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'شقة غرفتين وصالة مساحة 170 م',700000)"  ></td>
+        </tr>
+        <tr id="detail5" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: مصياف                  طاقة شمسية                الطابق الثاني  </pre> 
+                <pre>    الملكية: طابو                بلكون مساحة 15 متر             مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>ريف دمشق</td>
+            <td > مزرعة 300 م</td>
+            <td>900000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail6' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'مزرعة 300م ',500000)"  ></td>
+        </tr>
+        <tr id="detail6" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: جديدة البلد                    متوفر طاقة شمسية                   </pre> 
+                <pre>    الملكية: طابو                3 مسابح            مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>دمشق</td>
+            <td > شقة فارغة غرفتين وصالة مساحة 150 م</td>
+            <td>500000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail7' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, '  شقة فارغة غرفتين وصالة مساحة 150 م',500000)"  ></td>
+        </tr>
+        <tr id="detail7" class="detail-section">
+            <td colspan="5" >  <pre>                  المنطقة: مشروع دمر                   حديقة للمنزل                           </pre> 
+                <pre>الملكية: طابو                       غير   مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>اللاذقية</td>
+            <td > شاليه غرفة وصالة مساحة 100 م</td>
+            <td>650000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail8' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'شاليه غرفة وصالة مساحة 100 م',650000)"  ></td>
+        </tr>
+        <tr id="detail8" class="detail-section">
+            <td colspan="5" >  <pre>   المنطقة: رأس البسيط    طاقة شمسية       </pre> 
+                <pre>    الملكية: طابو                بلكون مساحة 12 متر             مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>دمشق</td>
+            <td > سوبر مركت </td>
+            <td>900000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail9' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'سوبر ماكت     ',900000)"  ></td>
+        </tr>
+        <tr id="detail9" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: ميدان                   متوفر مستودع خارجي                   </pre> 
+                <pre>    الملكية: طابو                   </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+        <tr>
+            <td>دمشق</td>
+            <td > شقة3 غرف وصالة مساحة 300 م</td>
+            <td>1200000 ل.س</td>
+            <td><input type="checkbox" ID="checkbox" onclick="toggleDetail(this, 'detail10' )"></td>
+            <td><input type="checkbox"  class="record-checkbox"  onclick="onUnCheck(this); ToggleCart(this, 'شقة3 غرف وصالة مساحة 70 م',1200000)"  ></td>
+        </tr>
+        <tr id="detail10" class="detail-section">
+            <td colspan="5" >  <pre> المنطقة: زاهرة جديدة                    متوفر كراج                الطابق الثالث  </pre> 
+                <pre>    الملكية: طابو                بلكون عدد 2 مساحة 12 متر             مفروشة       </pre>
+                <div class="image-container"><pre> <img src="pics/home.jpg" alt="home pic">  <img src="pics/home.jpg" alt="home pic"> <img src="pics/home.jpg" alt="home pic">  </pre></div>
+                
+            </td> 
+        </tr>
+ </table>
+ <button type="button" id="proceedButton" >متابعة</button>
+  <p id="total"> ل.س <span id="TotalNum" > 0 </span> :الاجمالي</p>
+ <form action="" id="form1" class="form1">
+    <fieldset>
+        <legend>معلومات مقدم الطلب</legend>
+        <label for="first"  type="text"  id="FullName" >الاسم الكامل:</label>
+        <input type="text" id="first" name="first"   oninput="validateArabicInput(this)"    >
+    <br>
+        <label for="national-id">الرقم الوطني:</label>
+        <input type="number" id="national-id" name="national-id" pattern="[0-9]+" required maxlength="11" onblur="ValidateNationalNumber(this)" >
+    <br>
+    
+    <label for="birthday">تاريخ الميلاد:</label>
+    <input type="date" id="birthday" name="birthday">
+    <br>
+    <br>
+
+        <!-- باقي الحقول هنا -->
+
+  
+        <label for="mobile">رقم الموبايل:</label>
+        <input type="number" id="mobile" name="mobile" maxlength="10" onblur="ValidatePhoneNumber(this)" >
+    <br>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com">
+    </fieldset>
+
+    <div id="user-input" class="inline">
+        <input type="text" 
+               id="ssubmit" 
+               placeholder="Captcha code" required/>
+    </div>
+
+    <div class="inline" onclick="generate()">
+        <i class="fas fa-sync"></i>
+    </div>
+
+    <div id="image" 
+         class="inline" 
+         selectable="False">
+    </div>
+   
+    <p id="key"></p>
+    <button type="submit"  onclick="printmsg()">تسجيل</button>
+</form>
+
+  <!-- Cart Pop-up -->
+  <div class="cart-popup" id="cartPopup">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <button id="closeCartBtn">Close</button>
+</div>
+
+</body>
+
+<script src="myFunctions.js"></script>
+
+</html>
